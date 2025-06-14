@@ -6,7 +6,10 @@
   # Hyprland Settings
   # ex: extraMonitorSettings = "monitor = Virtual-1,1920x1080@60,auto,1";
   # ex: extraMonitorSettings = "monitor = HDMI-A-1,1920x1080@60,auto,1";
-  extraMonitorSettings = "";
+  extraMonitorSettings = "
+  monitor=desc:GIGA-BYTE TECHNOLOGY CO. LTD. M28U,3840x2160@60,0x0,1,vrr,3
+  monitor=desc: Philips Consumer Electronics Company PHL 245E1,2560x1440@74.97,auto,1, transform, 3
+  ";
 
   # Waybar Settings
   clock24h = true;
