@@ -34,6 +34,8 @@
     warp-terminal
     lutris
     pkgs.teams-for-linux
+    thunderbird
+    firefox
     #pkgs.citrix_workspace
   ];
 }
