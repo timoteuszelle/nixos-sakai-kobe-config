@@ -20,6 +20,7 @@
     ./thunar.nix
     ./user.nix
     ./virtualisation.nix
+    ./wine.nix
     ./xserver.nix
     inputs.stylix.nixosModules.stylix
   ];
