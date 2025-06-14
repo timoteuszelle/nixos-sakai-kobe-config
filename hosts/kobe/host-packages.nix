@@ -1,0 +1,39 @@
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    audacity
+    discord
+    nodejs
+    obs-studio
+    vlc
+    yt-dlp
+    darktable
+    davinci-resolve
+    virtualboxWithExtpack
+    libreoffice
+    hunspell
+    hunspellDicts.en_US
+    hunspellDicts.nl_NL
+    ffmpeg
+    gphoto2
+    v4l-utils
+    openssh
+    sshs
+    mullvad-vpn
+    lm_sensors
+    s-tui
+    nextcloud-client
+    icloudpd
+    toybox
+    xivlauncher
+    neovim
+    tailscale-systray
+    tailscale
+    streamcontroller
+    dxvk
+    signal-desktop
+    warp-terminal
+    lutris
+    pkgs.teams-for-linux
+    #pkgs.citrix_workspace
+  ];
+}
