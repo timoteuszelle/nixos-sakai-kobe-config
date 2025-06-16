@@ -1,28 +1,36 @@
 {pkgs, ...}: {
-  # Enable 32-bit support for Wine
-  hardware.opengl = {
+  # AMD-specific graphics configuration
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      amdvlk
+      rocmPackages.clr
+      rocmPackages.clr.icd
+    ];
+    extraPackages32 = with pkgs; [
+      driversi686Linux.amdvlk
+    ];
   };
 
-  # Enable Wine with proper configuration
-  programs.wine.enable = true;
-
-  # Add necessary environment variables for Wine
+  # Configure system environment for Wine
   environment = {
     sessionVariables = {
       WINEARCH = "win64";
       WINEPREFIX = "$HOME/.wine";
+      AMD_VULKAN_ICD = "RADV";
     };
     systemPackages = with pkgs; [
-      # Use the pre-built wine package
-      wine64
+      # Wine and its dependencies
+      wineWowPackages.staging
       winetricks
       
-      # Additional dependencies
-      cabextract  # Needed for winetricks
-      dxvk        # DirectX to Vulkan translation
+      # Gaming optimizations for AMD
+      dxvk
+      vkd3d-proton    # DirectX 12 support
+      mangohud        # Performance monitoring
+      gamemode        # Performance optimization
+      vulkan-tools    # Vulkan utilities
     ];
   };
 }

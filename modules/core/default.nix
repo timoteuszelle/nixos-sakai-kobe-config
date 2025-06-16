@@ -1,4 +1,5 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   imports = [
     ./boot.nix
     ./flatpak.nix
@@ -20,7 +21,7 @@
     ./thunar.nix
     ./user.nix
     ./virtualisation.nix
-    ./wine.nix
+    #./wine.nix
     ./xserver.nix
     inputs.stylix.nixosModules.stylix
   ];

@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     audacity
     discord
@@ -29,9 +30,9 @@
     tailscale-systray
     tailscale
     streamcontroller
-    dxvk
-    wine
-    winetricks
+    #dxvk
+    #wine
+    #winetricks
     signal-desktop
     warp-terminal
     lutris
