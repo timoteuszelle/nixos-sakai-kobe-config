@@ -30,9 +30,6 @@
     tailscale-systray
     tailscale
     streamcontroller
-    #dxvk
-    #wine
-    #winetricks
     signal-desktop
     warp-terminal
     lutris

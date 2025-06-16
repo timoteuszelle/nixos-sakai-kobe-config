@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # AMD-specific graphics configuration
   hardware.graphics = {
     enable = true;
@@ -22,16 +23,16 @@
     };
     systemPackages = with pkgs; [
       # Wine and its dependencies
-      wineWowPackages.staging
+      #wineWowPackages.staging
+      wineWowPackages.stable
       winetricks
-      
+
       # Gaming optimizations for AMD
       dxvk
-      vkd3d-proton    # DirectX 12 support
-      mangohud        # Performance monitoring
-      gamemode        # Performance optimization
-      vulkan-tools    # Vulkan utilities
+      vkd3d-proton # DirectX 12 support
+      mangohud # Performance monitoring
+      gamemode # Performance optimization
+      vulkan-tools # Vulkan utilities
     ];
   };
 }
-
