@@ -9,6 +9,7 @@
     ./network.nix
     ./nfs.nix
     ./nh.nix
+    ./openlinkhub.nix
     ./packages.nix
     ./printing.nix
     ./security.nix
