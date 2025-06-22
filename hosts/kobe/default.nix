@@ -4,6 +4,6 @@
     ./host-packages.nix
   ];
   
-  # Enable OpenLinkHub module
-  modules.core.openlinkhub.enable = true;
+  # OpenLinkHub module disabled (using Docker setup instead)
+  # modules.core.openlinkhub.enable = true;
 }

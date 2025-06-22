@@ -36,7 +36,7 @@
     pkgs.teams-for-linux
     thunderbird
     firefox
-    openlinkhub
+    #openlinkhub
     #pkgs.citrix_workspace
   ];
 }
