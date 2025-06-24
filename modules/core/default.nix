@@ -22,6 +22,7 @@
     ./thunar.nix
     ./user.nix
     ./virtualisation.nix
+    ./webcam.nix
     ./wine.nix
     ./xserver.nix
     inputs.stylix.nixosModules.stylix
