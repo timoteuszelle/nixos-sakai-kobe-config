@@ -21,6 +21,8 @@
       allowedUDPPorts = [
         59010
         59011
+        41641  # Tailscale default port
+        3478   # STUN for Tailscale
       ];
     };
   };
