@@ -27,3 +27,9 @@ hosts/kobe/linuxx64-24.11.0.85.tar.gz
 # Documentation
 # --------------------------------
 openlinkhub-readme-update.md
+
+# --------------------------------
+# Privacy Masking Files
+# --------------------------------
+# Ignore actual privacy mask files containing personal information
+#hosts/*/privacymask.nix

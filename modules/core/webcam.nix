@@ -37,7 +37,13 @@ in
     hardware.enableAllFirmware = true;
     
     # Load necessary webcam kernel modules
-    boot.kernelModules = [ "uvcvideo" ];
+    boot.kernelModules = mkMerge [
+      # Always load UVC video driver
+      [ "uvcvideo" ]
+      
+      # Conditionally load v4l2loopback if enabled
+      (mkIf cfg.v4l2loopback.enable [ "v4l2loopback" ])
+    ];
     
     # Configure v4l2loopback if enabled
     boot.extraModulePackages = mkIf cfg.v4l2loopback.enable [
@@ -47,9 +53,6 @@ in
     boot.extraModprobeConfig = mkIf cfg.v4l2loopback.enable ''
       options v4l2loopback devices=${toString cfg.v4l2loopback.instances} exclusive_caps=${if cfg.v4l2loopback.exclusive_caps then "1" else "0"} card_label="${cfg.v4l2loopback.card_label}"
     '';
-    
-    # Ensure v4l2loopback is loaded on boot if enabled
-    boot.kernelModules = mkIf cfg.v4l2loopback.enable [ "v4l2loopback" ];
     
     # Add udev rules for better webcam device permissions
     services.udev.extraRules = ''
@@ -63,8 +66,8 @@ in
       SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ENV{ID_USB_INTERFACES}=="*:0e0100:*", GROUP="video", MODE="0660"
     '';
     
-    # Ensure users who need camera access are in the video group
-    users.groups.video.gid = config.users.groups.video.gid or 5;
+    # Note: Make sure to add your user to the 'video' group 
+    # for proper camera access permissions
     
     # Install helpful webcam utilities
     environment.systemPackages = with pkgs; [

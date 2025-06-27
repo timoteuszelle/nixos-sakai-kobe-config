@@ -1,3 +1,44 @@
+# NixOS Configuration for Desktop and Laptop
+
+This repository contains my personal NixOS configuration for desktop (Sakai) and laptop (Kobe) systems, based on ZaneyOS.
+
+## Privacy Masking Setup
+
+This repository uses a privacy masking approach to protect sensitive information:
+
+1. Sensitive information is stored in `privacymask.nix` files in each host directory
+2. The `variables.nix` file imports values from `privacymask.nix`
+3. Other modules continue to import from `variables.nix` as before
+4. The actual `privacymask.nix` files are not committed to the repository
+
+To set up your own configuration:
+
+1. Copy the example mask file for your system:
+   ```bash
+   cp hosts/kobe/privacymask.example.nix hosts/kobe/privacymask.nix
+   ```
+
+2. Edit your `privacymask.nix` file with your personal information:
+   ```bash
+   nano hosts/kobe/privacymask.nix
+   ```
+
+3. The system will automatically use your values.
+
+## Building the System
+
+Build and switch to the configuration:
+
+```bash
+sudo nixos-rebuild switch --flake .#<hostname>
+```
+
+Replace `<hostname>` with your system's hostname (e.g., `kobe` or `sakai`).
+
+## Acknowledgments
+
+This configuration is based on [ZaneyOS](https://gitlab.com/zaney/zaneyos.git).
+
 <div align="center">
 
 ## ZaneyOS 🟰 Best ❄️ NixOS Configs
