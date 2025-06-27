@@ -1,0 +1,29 @@
+# --------------------------------
+# Log files
+# --------------------------------
+openlinkhub.err
+openlinkhub.log
+openlinkhub.out
+output.log
+stdout.log
+strace.log
+
+# --------------------------------
+# Configuration and Data Files
+# --------------------------------
+config.json
+dashboard.json
+database/
+static/
+web/
+
+# --------------------------------
+# Build Artifacts and Temporary Files
+# --------------------------------
+result
+hosts/kobe/linuxx64-24.11.0.85.tar.gz
+
+# --------------------------------
+# Documentation
+# --------------------------------
+openlinkhub-readme-update.md
