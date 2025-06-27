@@ -1,0 +1,9 @@
+# Files to keep our version
+flake.lock merge=ours
+wallpapers/** merge=ours
+**/face.jpg merge=ours
+img/** merge=ours
+
+# Directories to keep our version
+wallpapers/ merge=ours
+img/ merge=ours
