@@ -1,3 +1,25 @@
+# NixOS Configuration
+
+This repository contains NixOS configuration for different systems.
+
+## Privacy Configuration
+
+This configuration uses a privacy masking system:
+
+1. Each host directory contains a `privacy-mask.nix` file with generic placeholder values.
+2. When setting up your own system, modify this file with your personal information.
+3. If you contribute to this repository, ensure your personal `privacy-mask.nix` changes are not committed.
+
+## Building the System
+
+Build and switch to the configuration:
+
+```bash
+sudo nixos-rebuild switch --flake .#<profile>
+```
+
+Where `<profile>` is the profile you want to build (e.g., `amd`, `intel`, etc.).
+
 # NixOS Configuration for Desktop and Laptop
 
 This repository contains my personal NixOS configuration for desktop (Sakai) and laptop (Kobe) systems, based on ZaneyOS.

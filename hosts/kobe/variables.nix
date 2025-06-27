@@ -1,6 +1,7 @@
 let
-  # Import sensitive information from privacymask.nix
-  mask = import ./privacy-mask.nix;
+  # Import sensitive information from external location
+  # This file MUST exist or the build will fail (intentionally)
+  mask = import /home/tim/.config/nixos-config/privacy/kobe.nix;
 in {
   # Git Configuration (For Pulling Software Repos)
   gitUsername = mask.gitUsername;

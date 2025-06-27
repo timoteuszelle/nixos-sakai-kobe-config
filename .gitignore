@@ -31,5 +31,5 @@ openlinkhub-readme-update.md
 # --------------------------------
 # Privacy Masking Files
 # --------------------------------
-# Ignore actual privacy mask files containing personal information
-#hosts/*/privacymask.nix
+# Uncomment below line only AFTER adding a generic privacy-mask.nix to git
+# hosts/*/privacy-mask.nix
