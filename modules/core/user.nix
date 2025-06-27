@@ -34,6 +34,7 @@ in {
       "lp"
       "networkmanager"
       "scanner"
+      "video"
       "wheel"
     ];
     shell = pkgs.zsh;

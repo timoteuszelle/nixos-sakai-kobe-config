@@ -1,7 +1,10 @@
-{
-  # Git Configuration ( For Pulling Software Repos )
-  gitUsername = "Tim Oudesluijs-Zelle	";
-  gitEmail = "tim@oudesluijszelle.nl";
+let
+  # Import sensitive information from privacymask.nix
+  mask = import ./privacy-mask.nix;
+in {
+  # Git Configuration (For Pulling Software Repos)
+  gitUsername = mask.gitUsername;
+  gitEmail = mask.gitEmail;
 
   # Hyprland Settings
   # ex: extraMonitorSettings = "monitor = Virtual-1,1920x1080@60,auto,1";

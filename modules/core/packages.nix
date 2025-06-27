@@ -1,14 +1,15 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs = {
     neovim = {
       enable = true;
       defaultEditor = true;
     };
-    firefox.enable = false; # Firefox is not installed by default
+    firefox.enable = true; # Firefox is not installed by default
     dconf.enable = true;
     seahorse.enable = true;
-    hyprland.enable = true; #create desktop file and depedencies if you switch to GUI login MGR
-    hyprlock.enable = true; #resolve pam issue https://gitlab.com/Zaney/zaneyos/-/issues/164
+    hyprland.enable = true; # create desktop file and depedencies if you switch to GUI login MGR
+    hyprlock.enable = true; # resolve pam issue https://gitlab.com/Zaney/zaneyos/-/issues/164
     fuse.userAllowOther = true;
     mtr.enable = true;
     adb.enable = true;
@@ -38,7 +39,7 @@
     gedit # Simple Graphical Text Editor
     gimp # Great Photo Editor
     glxinfo # Needed for inxi -G GPU info
-    gping #graphical ping
+    gping # graphical ping
     greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
     htop # Simple Terminal Based System Monitor
     hyprpicker # Color Picker
@@ -52,7 +53,7 @@
     mpv # Incredible Video Player
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nixfmt-rfc-style # Nix Formatter
-    onefetch #shows current build info and stats
+    onefetch # shows current build info and stats
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
     picard # For Changing Music Metadata & Getting Cover Art
