@@ -60,4 +60,3 @@ in {
   # Enable Thunar GUI File Manager
   thunarEnable = true;
 }
-

@@ -31,5 +31,7 @@ openlinkhub-readme-update.md
 # --------------------------------
 # Privacy Masking Files
 # --------------------------------
-# Uncomment below line only AFTER adding a generic privacy-mask.nix to git
-# hosts/*/privacy-mask.nix
+# Local privacy configuration directory (contains sensitive information)
+hosts/*/privacymask.nix
+# External privacy configuration directory
+~/.config/nixos-config/privacy/
